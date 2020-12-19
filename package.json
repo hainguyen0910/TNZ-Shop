@@ -1,0 +1,56 @@
+{
+  "name": "tnz-shop",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "linting": "eslint src",
+    "prettier": "prettier \"src/**/*.{js,css,scss,ts,tsx,jsx}\"",
+    "format": "npm run prettier -- --write"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.5.0",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.21.0",
+    "classnames": "^2.2.6",
+    "formik": "^2.2.6",
+    "next": "10.0.3",
+    "next-images": "^1.6.2",
+    "query-string": "^6.13.7",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-redux": "^7.2.2",
+    "yup": "^0.32.8"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.14",
+    "@types/react": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "eslint": "^7.15.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "lint-staged": "^10.5.3",
+    "node-sass": "^5.0.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,css}": [
+      "eslint src",
+      "npm run format",
+      "git add"
+    ]
+  }
+}
